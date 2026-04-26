@@ -7,9 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      contents: read
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -29,7 +26,6 @@ jobs:
 
     - name: Build Application
       run: |
-        exec > build_log.txt 2>&1
         echo "ANDROID_HOME: $ANDROID_HOME"
         export ANDROID_NDK_HOME=$(ls -d $ANDROID_HOME/ndk/* | sort -V | tail -n 1)
         echo "Using NDK: $ANDROID_NDK_HOME"
@@ -37,38 +33,20 @@ jobs:
         cargo install cargo-ndk --version 2.12.6
         
         cd rust-core
-        cargo ndk -t arm64-v8a -p 28 build --release || echo "Rust arm64 failed!"
-        cargo ndk -t armeabi-v7a -p 28 build --release || echo "Rust armv7 failed!"
+        cargo ndk -t arm64-v8a -p 28 build --release || exit 1
+        cargo ndk -t armeabi-v7a -p 28 build --release || exit 1
         
         mkdir -p ../app/src/main/jniLibs/arm64-v8a
         mkdir -p ../app/src/main/jniLibs/armeabi-v7a
-        cp target/aarch64-linux-android/release/libinsta_core.so ../app/src/main/jniLibs/arm64-v8a/ || echo "Copy arm64 failed!"
-        cp target/armv7-linux-androideabi/release/libinsta_core.so ../app/src/main/jniLibs/armeabi-v7a/ || echo "Copy armv7 failed!"
+        cp target/aarch64-linux-android/release/libinsta_core.so ../app/src/main/jniLibs/arm64-v8a/
+        cp target/armv7-linux-androideabi/release/libinsta_core.so ../app/src/main/jniLibs/armeabi-v7a/
         
         cd ..
         chmod +x gradlew
-        ./gradlew assembleDebug --stacktrace || echo "Android build failed!"
-      continue-on-error: true
+        ./gradlew assembleDebug
 
-    - name: Create Issue with Log
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        # Sadece son 500 satırı al, JSON'a uygun yap
-        tail -n 500 build_log.txt > tail_log.txt
-        python -c '
-        import os, json, urllib.request
-        with open("tail_log.txt") as f:
-            log = f.read()
-        token = os.environ.get("GITHUB_TOKEN")
-        req = urllib.request.Request(
-            "https://api.github.com/repos/BaranBey1331/-nsta/issues",
-            data=json.dumps({"title": "Build Logs Latest", "body": f"```\n{log}\n```"}).encode("utf-8"),
-            headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
-        )
-        try:
-            urllib.request.urlopen(req)
-            print("Issue created successfully")
-        except Exception as e:
-            print("Failed to create issue:", e)
-        '
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-debug
+        path: app/build/outputs/apk/debug/app-debug.apk
