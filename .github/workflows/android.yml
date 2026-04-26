@@ -45,7 +45,33 @@ jobs:
         cd ..
         chmod +x gradlew
         ./gradlew assembleDebug --stacktrace
-      continue-on-error: false
+      continue-on-error: true
+
+    - name: Create Issue with Log
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        tail -n 500 build_log.txt > tail_log.txt || echo "No log found" > tail_log.txt
+        python -c '
+        import os, json, urllib.request
+        with open("tail_log.txt") as f:
+            log = f.read()
+        token = os.environ.get("GITHUB_TOKEN")
+        req = urllib.request.Request(
+            "https://api.github.com/repos/BaranBey1331/-nsta/issues",
+            data=json.dumps({"title": "Build Logs Failure Analysis", "body": f"```\n{log}\n```"}).encode("utf-8"),
+            headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+        )
+        try:
+            urllib.request.urlopen(req)
+        except Exception as e:
+            print("Failed:", e)
+        '
+      continue-on-error: true
+
+    - name: Fail if build failed
+      run: |
+        if grep -q "BUILD FAILED" build_log.txt || grep -q "failed!" build_log.txt; then exit 1; fi
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
