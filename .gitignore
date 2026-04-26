@@ -1,0 +1,8 @@
+.worktrees/
+build/
+.gradle/
+*.iml
+.idea/
+local.properties
+capture/
+rust-core/target/
