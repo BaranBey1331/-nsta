@@ -27,18 +27,21 @@ jobs:
         targets: aarch64-linux-android, armv7-linux-androideabi
 
     - name: Install cargo-ndk
-      run: cargo install cargo-ndk
-
-    - name: Setup Android NDK
-      uses: n0rt3n/setup-android-ndk@v1
+      uses: taiki-e/install-action@v2
       with:
-        ndk-version: r25c
+        tool: cargo-ndk
+
+    - name: Configure NDK Path
+      run: |
+        # Use the pre-installed NDK 25.2.9519653
+        echo "ANDROID_NDK_HOME=$ANDROID_HOME/ndk/25.2.9519653" >> $GITHUB_ENV
 
     - name: Build Rust Core
       run: |
         cd rust-core
         cargo ndk -t arm64-v8a -p 28 build --release
         cargo ndk -t armeabi-v7a -p 28 build --release
+        
         mkdir -p ../app/src/main/jniLibs/arm64-v8a
         mkdir -p ../app/src/main/jniLibs/armeabi-v7a
         cp target/aarch64-linux-android/release/libinsta_core.so ../app/src/main/jniLibs/arm64-v8a/
