@@ -24,20 +24,32 @@ jobs:
       with:
         targets: aarch64-linux-android, armv7-linux-androideabi
 
-    - name: Install Android NDK
-      uses: n0rt3n/setup-android-ndk@v1
-      with:
-        ndk-version: r25c
+    - name: Install cargo-ndk
+      run: cargo install cargo-ndk
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew || true
+    - name: Build Rust Core (arm64-v8a)
+      run: |
+        cd rust-core
+        cargo ndk -t arm64-v8a build --release
+        mkdir -p ../app/src/main/jniLibs/arm64-v8a
+        cp target/aarch64-linux-android/release/libinsta_core.so ../app/src/main/jniLibs/arm64-v8a/
+
+    - name: Build Rust Core (armeabi-v7a)
+      run: |
+        cd rust-core
+        cargo ndk -t armeabi-v7a build --release
+        mkdir -p ../app/src/main/jniLibs/armeabi-v7a
+        cp target/armv7-linux-androideabi/release/libinsta_core.so ../app/src/main/jniLibs/armeabi-v7a/
+
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
 
     - name: Build with Gradle
-      run: ./gradlew assembleDebug
-      continue-on-error: true # Şu an NDK entegrasyonu manuel yapıldığı için hata alabilir, kontrol amaçlı
+      run: gradle assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
         path: app/build/outputs/apk/debug/app-debug.apk
+EOF
