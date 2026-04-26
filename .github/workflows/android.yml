@@ -24,32 +24,31 @@ jobs:
       with:
         targets: aarch64-linux-android, armv7-linux-androideabi
 
-    - name: Install Android NDK
-      uses: n0rt3n/setup-android-ndk@v1
-      with:
-        ndk-version: r25c
-
     - name: Install cargo-ndk
       run: cargo install cargo-ndk
 
     - name: Build Rust Core
       run: |
+        # GitHub Runner'da yüklü olan NDK'yı kullan
+        export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
+        if [ ! -d "$ANDROID_NDK_HOME" ]; then
+          export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk | sort -V | tail -n 1)
+        fi
+        echo "Using NDK at: $ANDROID_NDK_HOME"
+        
         cd rust-core
-        # Build for both architectures
         cargo ndk -t arm64-v8a -p 28 build --release
         cargo ndk -t armeabi-v7a -p 28 build --release
         
-        # Copy to jniLibs
         mkdir -p ../app/src/main/jniLibs/arm64-v8a
         mkdir -p ../app/src/main/jniLibs/armeabi-v7a
         cp target/aarch64-linux-android/release/libinsta_core.so ../app/src/main/jniLibs/arm64-v8a/
         cp target/armv7-linux-androideabi/release/libinsta_core.so ../app/src/main/jniLibs/armeabi-v7a/
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-
     - name: Build with Gradle
-      run: ./gradlew assembleDebug --stacktrace
+      run: |
+        chmod +x gradlew
+        ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
