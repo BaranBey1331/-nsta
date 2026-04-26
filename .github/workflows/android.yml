@@ -24,17 +24,15 @@ jobs:
       with:
         targets: aarch64-linux-android, armv7-linux-androideabi
 
-    - name: Install cargo-ndk
-      run: cargo install cargo-ndk
-
     - name: Build Rust Core
       run: |
-        # GitHub Runner'da yüklü olan NDK'yı kullan
-        export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
-        if [ ! -d "$ANDROID_NDK_HOME" ]; then
-          export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk | sort -V | tail -n 1)
-        fi
+        # GitHub'ın default NDK konumunu kesinleştir
+        export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/25.2.9519653
         echo "Using NDK at: $ANDROID_NDK_HOME"
+        
+        # cargo-ndk yerine doğrudan cargo ile derleme (daha hafif)
+        # Ama önce cargo-ndk'nın kurulu olduğundan emin olalım (eğer gerekliyse)
+        cargo install cargo-ndk
         
         cd rust-core
         cargo ndk -t arm64-v8a -p 28 build --release
