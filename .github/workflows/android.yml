@@ -25,14 +25,21 @@ jobs:
         toolchain: stable
         targets: aarch64-linux-android, armv7-linux-androideabi
 
+    - name: Cache cargo-ndk
+      id: cache-cargo-ndk
+      uses: actions/cache@v4
+      with:
+        path: ~/.cargo/bin/cargo-ndk
+        key: ${{ runner.os }}-cargo-ndk-v1
+
     - name: Install cargo-ndk
+      if: steps.cache-cargo-ndk.outputs.cache-hit != 'true'
       run: cargo install cargo-ndk
 
     - name: Build Rust Core (arm64-v8a)
       run: |
-        # GitHub'ın default NDK yolunu kullan
-        export ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk-bundle
-        [ -d "$ANDROID_NDK_HOME" ] || export ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/$(ls -1 $ANDROID_SDK_ROOT/ndk | head -n 1)
+        # NDK yolunu GitHub'ın standart yolundan al
+        export ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/$(ls -1 $ANDROID_SDK_ROOT/ndk | sort -V | tail -n 1)
         echo "Using NDK at: $ANDROID_NDK_HOME"
         
         cd rust-core
@@ -42,19 +49,17 @@ jobs:
 
     - name: Build Rust Core (armeabi-v7a)
       run: |
-        export ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk-bundle
-        [ -d "$ANDROID_NDK_HOME" ] || export ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/$(ls -1 $ANDROID_SDK_ROOT/ndk | head -n 1)
+        export ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/$(ls -1 $ANDROID_SDK_ROOT/ndk | sort -V | tail -n 1)
         
         cd rust-core
         cargo ndk -t armeabi-v7a -p 28 build --release
         mkdir -p ../app/src/main/jniLibs/armeabi-v7a
         cp target/armv7-linux-androideabi/release/libinsta_core.so ../app/src/main/jniLibs/armeabi-v7a/
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-
     - name: Build with Gradle
-      run: ./gradlew assembleDebug --stacktrace
+      run: |
+        chmod +x gradlew
+        ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
