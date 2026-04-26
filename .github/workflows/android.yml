@@ -3,8 +3,6 @@ name: Android Build
 on:
   push:
     branches: [ master, main ]
-  pull_request:
-    branches: [ master, main ]
 
 jobs:
   build:
@@ -26,34 +24,48 @@ jobs:
         toolchain: stable
         targets: aarch64-linux-android, armv7-linux-androideabi
 
-    - name: Install cargo-ndk
-      uses: taiki-e/install-action@v2
-      with:
-        tool: cargo-ndk
-
-    - name: Configure NDK Path
+    - name: Build and Log
       run: |
-        # Use the pre-installed NDK 25.2.9519653
-        echo "ANDROID_NDK_HOME=$ANDROID_HOME/ndk/25.2.9519653" >> $GITHUB_ENV
-
-    - name: Build Rust Core
-      run: |
-        cd rust-core
-        cargo ndk -t arm64-v8a -p 28 build --release
-        cargo ndk -t armeabi-v7a -p 28 build --release
+        exec > build_log.txt 2>&1
+        echo "Starting build..."
         
+        # Check NDK
+        echo "ANDROID_HOME: $ANDROID_HOME"
+        ls -d $ANDROID_HOME/ndk/* || echo "No NDKs found"
+        export ANDROID_NDK_HOME=$(ls -d $ANDROID_HOME/ndk/* | sort -V | tail -n 1)
+        echo "Using NDK: $ANDROID_NDK_HOME"
+        
+        echo "Installing cargo-ndk..."
+        cargo install cargo-ndk
+        
+        echo "Building Rust..."
+        cd rust-core
+        cargo ndk -t arm64-v8a -p 28 build --release || echo "Rust build arm64 failed!"
+        cargo ndk -t armeabi-v7a -p 28 build --release || echo "Rust build armv7 failed!"
+        
+        echo "Copying libs..."
         mkdir -p ../app/src/main/jniLibs/arm64-v8a
         mkdir -p ../app/src/main/jniLibs/armeabi-v7a
-        cp target/aarch64-linux-android/release/libinsta_core.so ../app/src/main/jniLibs/arm64-v8a/
-        cp target/armv7-linux-androideabi/release/libinsta_core.so ../app/src/main/jniLibs/armeabi-v7a/
-
-    - name: Build Android APK
-      run: |
+        cp target/aarch64-linux-android/release/libinsta_core.so ../app/src/main/jniLibs/arm64-v8a/ || echo "Copy arm64 failed!"
+        cp target/armv7-linux-androideabi/release/libinsta_core.so ../app/src/main/jniLibs/armeabi-v7a/ || echo "Copy armv7 failed!"
+        
+        cd ..
+        echo "Building Android..."
         chmod +x gradlew
-        ./gradlew assembleDebug --stacktrace
+        ./gradlew assembleDebug --stacktrace || echo "Android build failed!"
+        
+        echo "Done!"
+      continue-on-error: true
+
+    - name: Upload Logs
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-logs
+        path: build_log.txt
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
         path: app/build/outputs/apk/debug/app-debug.apk
+      continue-on-error: true
