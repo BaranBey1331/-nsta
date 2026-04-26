@@ -8,7 +8,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 jni = "0.21.1"
-reqwest = { version = "0.11", features = ["blocking", "json"] }
+reqwest = { version = "0.11", default-features = false, features = ["blocking", "json", "rustls-tls"] }
 scraper = "0.18.1"
 regex = "1.10.2"
 serde_json = "1.0.108"
