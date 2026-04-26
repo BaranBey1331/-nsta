@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -56,16 +59,26 @@ jobs:
         echo "Done!"
       continue-on-error: true
 
-    - name: Upload Logs to file.io
+    - name: Create Issue with Log
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        curl -F "file=@build_log.txt" https://file.io > fileio_response.json
-        cat fileio_response.json
-
-    - name: Commit Response
-      run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
-        git add fileio_response.json
-        git commit -m "Upload log response"
-        git push origin HEAD:master
+        # Sadece son 500 satırı al, JSON'a uygun yap
+        tail -n 500 build_log.txt > tail_log.txt
+        python -c '
+        import os, json, urllib.request
+        with open("tail_log.txt") as f:
+            log = f.read()
+        token = os.environ.get("GITHUB_TOKEN")
+        req = urllib.request.Request(
+            "https://api.github.com/repos/BaranBey1331/-nsta/issues",
+            data=json.dumps({"title": "Build Logs", "body": f"```\n{log}\n```"}).encode("utf-8"),
+            headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+        )
+        try:
+            urllib.request.urlopen(req)
+            print("Issue created successfully")
+        except Exception as e:
+            print("Failed to create issue:", e)
+        '
       continue-on-error: true
