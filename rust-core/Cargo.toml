@@ -1,5 +1,5 @@
 [package]
-name = "insta-core"
+name = "insta_core"
 version = "0.1.0"
 edition = "2021"
 
