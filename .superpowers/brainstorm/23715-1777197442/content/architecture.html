@@ -1,0 +1,50 @@
+<h2>Proje Mimarisi (yt-dlp + Backend)</h2>
+<p class="subtitle">Python/Rust Backend ve Android Uygulama Entegrasyonu</p>
+
+<div class="mockup">
+  <div class="mockup-header">Çalışma Mantığı</div>
+  <div class="mockup-body" style="padding: 20px; line-height: 1.6;">
+    <div style="display: flex; align-items: center; justify-content: space-between; text-align: center;">
+      <div style="border: 2px solid #6200ee; padding: 15px; border-radius: 8px; width: 30%;">
+        <strong>Android App</strong><br>
+        <span style="font-size: 0.8em; color: #666;">UI & İndirme Yönetimi</span>
+      </div>
+      <div style="font-size: 24px;">➔</div>
+      <div style="border: 2px solid #03dac6; padding: 15px; border-radius: 8px; width: 30%;">
+        <strong>Python/Rust API</strong><br>
+        <span style="font-size: 0.8em; color: #666;">yt-dlp Motoru (Free Tier)</span>
+      </div>
+      <div style="font-size: 24px;">➔</div>
+      <div style="border: 2px solid #ff0266; padding: 15px; border-radius: 8px; width: 30%;">
+        <strong>Instagram</strong><br>
+        <span style="font-size: 0.8em; color: #666;">Reels İçeriği</span>
+      </div>
+    </div>
+    
+    <div style="margin-top: 30px;">
+      <h4>Neden Bu Mimari?</h4>
+      <ul>
+        <li><strong>Güncellik:</strong> Instagram algoritma değiştirdiğinde sadece backend'deki yt-dlp'yi güncellemek yeterli olur.</li>
+        <li><strong>Performans:</strong> Android cihazın kaynaklarını (CPU/Pil) tüketmeden link çözümleme işlemi bulutta yapılır.</li>
+        <li><strong>Maliyet:</strong> Render, Fly.io veya Railway gibi platformların ücretsiz katmanları bu yük için yeterli olacaktır.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="options" data-multiselect>
+  <div class="option" data-choice="python" onclick="toggleSelect(this)">
+    <div class="letter">P</div>
+    <div class="content">
+      <h3>Python (FastAPI)</h3>
+      <p>yt-dlp ile en uyumlu ve hızlı geliştirme seçeneği.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="rust" onclick="toggleSelect(this)">
+    <div class="letter">R</div>
+    <div class="content">
+      <h3>Rust (Axum)</h3>
+      <p>Daha yüksek performans ve düşük kaynak tüketimi (ücretsiz katmanlar için ideal).</p>
+    </div>
+  </div>
+</div>

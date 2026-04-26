@@ -1,0 +1,38 @@
+<h2>Rust + Kotlin Native Mimari</h2>
+<p class="subtitle">Maksimum performans, minimum RAM (256MB altı)</p>
+
+<div class="mockup">
+  <div class="mockup-header">Teknik Yapı</div>
+  <div class="mockup-body" style="padding: 20px; line-height: 1.6;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+      <div style="border: 2px solid #6200ee; padding: 10px; border-radius: 8px; width: 90%; text-align: center; background: #f3e5f5;">
+        <strong>Kotlin (Jetpack Compose)</strong>
+        <div style="font-size: 0.8em; color: #666;">UI ve Dosya Kaydı</div>
+      </div>
+      <div style="font-size: 20px;">↕️ JNI (Java Native Interface)</div>
+      <div style="border: 2px solid #e57373; padding: 10px; border-radius: 8px; width: 90%; text-align: center; background: #ffebee;">
+        <strong>Rust Core (Native Lib)</strong>
+        <div style="font-size: 0.8em; color: #666;">Link Çözümleme & Network (Reqwest)</div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 25px; background: #fffde7; padding: 15px; border-radius: 8px; border: 1px solid #fff59d;">
+      <strong>Neden Rust?</strong>
+      <ul style="margin-top: 5px;">
+        <li><strong>Hız:</strong> Python interpreter yüklemeden milisaniyeler içinde çalışır.</li>
+        <li><strong>RAM:</strong> 256MB sınırının çok altında, sadece birkaç MB kullanır.</li>
+        <li><strong>Güvenlik:</strong> Bellek güvenliği (Memory safety) ile çökme riski minimumdur.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="rust_jni" onclick="toggleSelect(this)">
+    <div class="letter">R</div>
+    <div class="content">
+      <h3>Rust JNI Entegrasyonu</h3>
+      <p>Ağır Python kütüphaneleri yerine, linkleri cihazda çözen hafif bir Rust kütüphanesi kullanalım.</p>
+    </div>
+  </div>
+</div>

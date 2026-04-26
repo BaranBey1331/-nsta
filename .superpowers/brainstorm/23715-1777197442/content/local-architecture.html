@@ -1,0 +1,50 @@
+<h2>Cihaz İçi (In-App) Çözüm Mimarisi</h2>
+<p class="subtitle">Sunucu gerektirmeyen, tamamen uygulama içinde çalışan yapı</p>
+
+<div class="mockup">
+  <div class="mockup-header">Uygulama Mimarisi</div>
+  <div class="mockup-body" style="padding: 20px; line-height: 1.6;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+      <div style="border: 2px solid #6200ee; padding: 15px; border-radius: 8px; width: 80%; text-align: center; background: #f3e5f5;">
+        <strong>Android UI (Jetpack Compose)</strong>
+        <div style="font-size: 0.8em; color: #666;">Modern, Material 3 Arayüzü</div>
+      </div>
+      <div style="font-size: 20px;">⬇️</div>
+      <div style="border: 2px solid #ff9800; padding: 15px; border-radius: 8px; width: 80%; text-align: center; background: #fff3e0;">
+        <strong>Python Bridge (Chaquopy)</strong>
+        <div style="font-size: 0.8em; color: #666;">yt-dlp'yi Android içinde çalıştırır</div>
+      </div>
+      <div style="font-size: 20px;">⬇️</div>
+      <div style="border: 2px solid #4caf50; padding: 15px; border-radius: 8px; width: 80%; text-align: center; background: #e8f5e9;">
+        <strong>Local Storage / Download Manager</strong>
+        <div style="font-size: 0.8em; color: #666;">Videoyu doğrudan telefona kaydeder</div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 30px;">
+      <h4>Avantajlar:</h4>
+      <ul>
+        <li><strong>Sıfır Maliyet:</strong> Sunucu kirası yok.</li>
+        <li><strong>Gizlilik:</strong> Veriler cihazdan çıkmaz.</li>
+        <li><strong>Hafiflik:</strong> Sadece uygulama açıkken çalışır (Python interpreter optimize edilebilir).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="local_python" onclick="toggleSelect(this)">
+    <div class="letter">1</div>
+    <div class="content">
+      <h3>Android İçinde Python (Chaquopy)</h3>
+      <p>yt-dlp kütüphanesini doğrudan APK içine gömeriz. Güncellemesi kolaydır.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="pure_kotlin" onclick="toggleSelect(this)">
+    <div class="letter">2</div>
+    <div class="content">
+      <h3>Saf Kotlin Scraping</h3>
+      <p>Python kullanmadan, doğrudan Kotlin ile Instagram'dan video linkini ayıklarız. En hafif yöntemdir ama Instagram yapısı değişirse bozulabilir.</p>
+    </div>
+  </div>
+</div>
