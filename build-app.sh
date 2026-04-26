@@ -1,32 +1,49 @@
 #!/bin/bash
-# set -e (Hata olsa da devam etmesi için kapalı tutuyoruz teşhis amaçlı)
+set -e
 
-echo "--- Debug: Java & Android Home ---"
-echo "JAVA_HOME: $JAVA_HOME"
-echo "ANDROID_HOME: $ANDROID_HOME"
+# This script is for local development. 
+# GitHub Actions uses the workflow file for optimized builds.
 
-echo "--- Debug: Rust ---"
-rustc --version
-cargo --version
+echo "Building Rust core..."
 
-# NDK (En yeni olanı bul)
-NDK_DIR=$(ls -d $ANDROID_HOME/ndk/* 2>/dev/null | sort -V | tail -n 1)
-export ANDROID_NDK_HOME=$NDK_DIR
-echo "NDK_HOME: $ANDROID_NDK_HOME"
+# Check for cargo-ndk
+if ! command -v cargo-ndk &> /dev/null; then
+    echo "cargo-ndk not found, installing..."
+    cargo install cargo-ndk
+fi
 
-# JNI Libs (Empty placeholder if rust fails)
-mkdir -p app/src/main/jniLibs/arm64-v8a
-mkdir -p app/src/main/jniLibs/armeabi-v7a
-touch app/src/main/jniLibs/arm64-v8a/libplaceholder.so
+# Set NDK path if not set
+if [ -z "$ANDROID_NDK_HOME" ]; then
+    # Try to find NDK in default Android SDK location
+    if [ -d "$ANDROID_HOME/ndk" ]; then
+        export ANDROID_NDK_HOME=$(ls -d $ANDROID_HOME/ndk/* | sort -V | tail -n 1)
+        echo "Found NDK at $ANDROID_NDK_HOME"
+    else
+        echo "Error: ANDROID_NDK_HOME is not set and could not be found."
+        exit 1
+    fi
+fi
 
-# Rust Derlemeyi Dene
 cd rust-core
-rustup target add aarch64-linux-android armv7-linux-androideabi
-cargo install cargo-ndk || echo "Cargo NDK install failed, skipping Rust build"
-cargo ndk -t arm64-v8a -p 28 build --release && cp target/aarch64-linux-android/release/libinsta_core.so ../app/src/main/jniLibs/arm64-v8a/ || echo "Rust ARM64 failed"
-cargo ndk -t armeabi-v7a -p 28 build --release && cp target/armv7-linux-androideabi/release/libinsta_core.so ../app/src/main/jniLibs/armeabi-v7a/ || echo "Rust ARMv7 failed"
 
-# Android Derleme (Asıl önemli kısım)
+# Add targets if missing
+rustup target add aarch64-linux-android armv7-linux-androideabi
+
+# Build
+echo "Building for arm64-v8a and armeabi-v7a..."
+cargo ndk -t arm64-v8a -t armeabi-v7a -p 28 build --release
+
+# Copy to jniLibs
+echo "Copying libraries to app/src/main/jniLibs..."
+mkdir -p ../app/src/main/jniLibs/arm64-v8a
+mkdir -p ../app/src/main/jniLibs/armeabi-v7a
+
+cp target/aarch64-linux-android/release/libinsta_core.so ../app/src/main/jniLibs/arm64-v8a/
+cp target/armv7-linux-androideabi/release/libinsta_core.so ../app/src/main/jniLibs/armeabi-v7a/
+
 cd ..
+
+# Build Android app
+echo "Building Android app..."
 chmod +x gradlew
-./gradlew assembleDebug --stacktrace
+./gradlew assembleDebug

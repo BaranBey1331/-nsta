@@ -6,3 +6,5 @@ build/
 local.properties
 capture/
 rust-core/target/
+app/src/main/jniLibs/
+app/src/main/jniLibs/
