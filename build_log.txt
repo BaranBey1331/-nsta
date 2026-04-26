@@ -1,0 +1,861 @@
+ANDROID_HOME: /usr/local/lib/android/sdk
+Using NDK: /usr/local/lib/android/sdk/ndk/29.0.14206865
+[1m[92m    Updating[0m crates.io index
+[1m[92m Downloading[0m crates ...
+[1m[92m  Downloaded[0m cargo-ndk v2.12.6
+[1m[92m  Installing[0m cargo-ndk v2.12.6
+[1m[92m    Updating[0m crates.io index
+[1m[92m     Locking[0m 50 packages to latest compatible versions
+[1m[92m      Adding[0m cargo_metadata v0.15.4 [1m[33m(available: v0.23.1)[0m
+[1m[92m      Adding[0m env_logger v0.9.3 [1m[33m(available: v0.11.10)[0m
+[1m[92m      Adding[0m toml v0.5.11 [1m[33m(available: v1.1.2+spec-1.1.0)[0m
+[1m[92m Downloading[0m crates ...
+[1m[92m  Downloaded[0m eieio v1.0.0
+[1m[92m  Downloaded[0m atty v0.2.14
+[1m[92m  Downloaded[0m pct-str v1.2.0
+[1m[92m  Downloaded[0m cargo-platform v0.1.9
+[1m[92m  Downloaded[0m env_logger v0.9.3
+[1m[92m  Downloaded[0m camino v1.2.2
+[1m[92m  Downloaded[0m os_str_bytes v2.4.0
+[1m[92m  Downloaded[0m smallvec v1.15.1
+[1m[92m  Downloaded[0m percent-encoding v2.3.2
+[1m[92m  Downloaded[0m itoa v1.0.18
+[1m[92m  Downloaded[0m utf8-decode v1.0.1
+[1m[92m  Downloaded[0m zmij v1.0.21
+[1m[92m  Downloaded[0m toml v0.5.11
+[1m[92m  Downloaded[0m unicode-ident v1.0.24
+[1m[92m  Downloaded[0m serde v1.0.228
+[1m[92m  Downloaded[0m memchr v2.8.0
+[1m[92m  Downloaded[0m semver v1.0.28
+[1m[92m  Downloaded[0m aho-corasick v1.1.4
+[1m[92m  Downloaded[0m regex v1.12.3
+[1m[92m  Downloaded[0m proc-macro2 v1.0.106
+[1m[92m  Downloaded[0m serde_json v1.0.149
+[1m[92m  Downloaded[0m serde_core v1.0.228
+[1m[92m  Downloaded[0m quote v1.0.45
+[1m[92m  Downloaded[0m syn v1.0.109
+[1m[92m  Downloaded[0m once_cell v1.21.4
+[1m[92m  Downloaded[0m log v0.4.29
+[1m[92m  Downloaded[0m termcolor v1.4.1
+[1m[92m  Downloaded[0m syn v2.0.117
+[1m[92m  Downloaded[0m regex-syntax v0.8.10
+[1m[92m  Downloaded[0m serde_derive v1.0.228
+[1m[92m  Downloaded[0m pathos v0.3.0
+[1m[92m  Downloaded[0m gumdrop_derive v0.8.1
+[1m[92m  Downloaded[0m gumdrop v0.8.1
+[1m[92m  Downloaded[0m thiserror-impl v1.0.69
+[1m[92m  Downloaded[0m thiserror v1.0.69
+[1m[92m  Downloaded[0m iref v1.4.3
+[1m[92m  Downloaded[0m humantime v2.3.0
+[1m[92m  Downloaded[0m cargo_metadata v0.15.4
+[1m[92m  Downloaded[0m regex-automata v0.4.14
+[1m[92m  Downloaded[0m libc v0.2.186
+[1m[92m   Compiling[0m proc-macro2 v1.0.106
+[1m[92m   Compiling[0m quote v1.0.45
+[1m[92m   Compiling[0m unicode-ident v1.0.24
+[1m[92m   Compiling[0m serde_core v1.0.228
+[1m[92m   Compiling[0m memchr v2.8.0
+[1m[92m   Compiling[0m serde v1.0.228
+[1m[92m   Compiling[0m libc v0.2.186
+[1m[92m   Compiling[0m zmij v1.0.21
+[1m[92m   Compiling[0m thiserror v1.0.69
+[1m[92m   Compiling[0m syn v2.0.117
+[1m[92m   Compiling[0m syn v1.0.109
+[1m[92m   Compiling[0m aho-corasick v1.1.4
+[1m[92m   Compiling[0m serde_json v1.0.149
+[1m[92m   Compiling[0m camino v1.2.2
+[1m[92m   Compiling[0m regex-syntax v0.8.10
+[1m[92m   Compiling[0m utf8-decode v1.0.1
+[1m[92m   Compiling[0m pct-str v1.2.0
+[1m[92m   Compiling[0m serde_derive v1.0.228
+[1m[92m   Compiling[0m thiserror-impl v1.0.69
+[1m[92m   Compiling[0m regex-automata v0.4.14
+[1m[92m   Compiling[0m log v0.4.29
+[1m[92m   Compiling[0m itoa v1.0.18
+[1m[92m   Compiling[0m smallvec v1.15.1
+[1m[92m   Compiling[0m iref v1.4.3
+[1m[92m   Compiling[0m gumdrop_derive v0.8.1
+[1m[92m   Compiling[0m regex v1.12.3
+[1m[92m   Compiling[0m cargo-platform v0.1.9
+[1m[92m   Compiling[0m semver v1.0.28
+[1m[92m   Compiling[0m atty v0.2.14
+[1m[92m   Compiling[0m termcolor v1.4.1
+[1m[92m   Compiling[0m eieio v1.0.0
+[1m[92m   Compiling[0m percent-encoding v2.3.2
+[1m[92m   Compiling[0m os_str_bytes v2.4.0
+[1m[92m   Compiling[0m once_cell v1.21.4
+[1m[92m   Compiling[0m humantime v2.3.0
+[1m[92m   Compiling[0m pathos v0.3.0
+[1m[92m   Compiling[0m env_logger v0.9.3
+[1m[92m   Compiling[0m cargo_metadata v0.15.4
+[1m[92m   Compiling[0m gumdrop v0.8.1
+[1m[92m   Compiling[0m toml v0.5.11
+[1m[92m   Compiling[0m cargo-ndk v2.12.6
+[1m[92m    Finished[0m `release` profile [optimized] target(s) in 20.88s
+[1m[92m  Installing[0m /home/runner/.cargo/bin/cargo-ndk
+[1m[92m   Installed[0m package `cargo-ndk v2.12.6` (executable `cargo-ndk`)
+[2026-04-26T12:42:42Z WARN  cargo_ndk::cli] Environment variable `ANDROID_NDK_HOME = "/usr/local/lib/android/sdk/ndk/29.0.14206865"` doesn't match `ANDROID_NDK_ROOT = "/usr/local/lib/android/sdk/ndk/27.3.13750724"`
+[2026-04-26T12:42:42Z INFO  cargo_ndk::cli] Using NDK at path: /usr/local/lib/android/sdk/ndk/29.0.14206865 (ANDROID_NDK_HOME)
+[2026-04-26T12:42:42Z INFO  cargo_ndk::cli] NDK API level: 28
+[2026-04-26T12:42:42Z INFO  cargo_ndk::cli] Building targets: arm64-v8a
+[2026-04-26T12:42:42Z INFO  cargo_ndk::cli] Building arm64-v8a (aarch64-linux-android)
+[1m[92m    Updating[0m crates.io index
+[1m[92m     Locking[0m 206 packages to latest compatible versions
+[1m[92m      Adding[0m jni v0.21.1 [1m[33m(available: v0.22.4)[0m
+[1m[92m      Adding[0m reqwest v0.11.27 [1m[33m(available: v0.13.2)[0m
+[1m[92m      Adding[0m scraper v0.18.1 [1m[33m(available: v0.26.0)[0m
+[1m[92m Downloading[0m crates ...
+[1m[92m  Downloaded[0m sync_wrapper v0.1.2
+[1m[92m  Downloaded[0m utf8_iter v1.0.4
+[1m[92m  Downloaded[0m tinystr v0.8.3
+[1m[92m  Downloaded[0m writeable v0.6.3
+[1m[92m  Downloaded[0m untrusted v0.9.0
+[1m[92m  Downloaded[0m version_check v0.9.5
+[1m[92m  Downloaded[0m tower-service v0.3.3
+[1m[92m  Downloaded[0m tendril v0.4.3
+[1m[92m  Downloaded[0m jni-sys-macros v0.4.1
+[1m[92m  Downloaded[0m phf v0.11.3
+[1m[92m  Downloaded[0m fxhash v0.2.1
+[1m[92m  Downloaded[0m bitflags v2.11.1
+[1m[92m  Downloaded[0m zerofrom-derive v0.1.7
+[1m[92m  Downloaded[0m getopts v0.2.24
+[1m[92m  Downloaded[0m yoke-derive v0.8.2
+[1m[92m  Downloaded[0m try-lock v0.2.5
+[1m[92m  Downloaded[0m zerofrom v0.1.7
+[1m[92m  Downloaded[0m zerovec-derive v0.11.3
+[1m[92m  Downloaded[0m zerotrie v0.2.4
+[1m[92m  Downloaded[0m yoke v0.8.2
+[1m[92m  Downloaded[0m tracing-core v0.1.36
+[1m[92m  Downloaded[0m siphasher v1.0.2
+[1m[92m  Downloaded[0m ipnet v2.12.0
+[1m[92m  Downloaded[0m url v2.5.8
+[1m[92m  Downloaded[0m zerovec v0.11.6
+[1m[92m  Downloaded[0m rand_chacha v0.3.1
+[1m[92m  Downloaded[0m tokio-util v0.7.18
+[1m[92m  Downloaded[0m same-file v1.0.6
+[1m[92m  Downloaded[0m phf_generator v0.11.3
+[1m[92m  Downloaded[0m rand_core v0.6.4
+[1m[92m  Downloaded[0m slab v0.4.12
+[1m[92m  Downloaded[0m ppv-lite86 v0.2.21
+[1m[92m  Downloaded[0m find-msvc-tools v0.1.9
+[1m[92m  Downloaded[0m hyper-rustls v0.24.2
+[1m[92m  Downloaded[0m zerocopy v0.8.48
+[1m[92m  Downloaded[0m unicode-width v0.2.2
+[1m[92m  Downloaded[0m parking_lot_core v0.9.12
+[1m[92m  Downloaded[0m scraper v0.18.1
+[1m[92m  Downloaded[0m markup5ever v0.11.0
+[1m[92m  Downloaded[0m jni v0.21.1
+[1m[92m  Downloaded[0m socket2 v0.5.10
+[1m[92m  Downloaded[0m socket2 v0.6.3
+[1m[92m  Downloaded[0m shlex v1.3.0
+[1m[92m  Downloaded[0m icu_normalizer_data v2.2.0
+[1m[92m  Downloaded[0m selectors v0.25.0
+[1m[92m  Downloaded[0m tracing v0.1.44
+[1m[92m  Downloaded[0m rand v0.8.6
+[1m[92m  Downloaded[0m mio v1.2.0
+[1m[92m  Downloaded[0m indexmap v2.14.0
+[1m[92m  Downloaded[0m combine v4.6.7
+[1m[92m  Downloaded[0m idna v1.1.0
+[1m[92m  Downloaded[0m reqwest v0.11.27
+[1m[92m  Downloaded[0m rustls-webpki v0.101.7
+[1m[92m  Downloaded[0m icu_properties_data v2.2.0
+[1m[92m  Downloaded[0m hyper v0.14.32
+[1m[92m  Downloaded[0m hashbrown v0.17.0
+[1m[92m  Downloaded[0m futures-util v0.3.32
+[1m[92m  Downloaded[0m icu_collections v2.2.0
+[1m[92m  Downloaded[0m rustls v0.21.12
+[1m[92m  Downloaded[0m h2 v0.3.27
+[1m[92m  Downloaded[0m cc v1.2.61
+[1m[92m  Downloaded[0m base64 v0.21.7
+[1m[92m  Downloaded[0m icu_locale_core v2.2.0
+[1m[92m  Downloaded[0m html5ever v0.26.0
+[1m[92m  Downloaded[0m ryu v1.0.23
+[1m[92m  Downloaded[0m getrandom v0.2.17
+[1m[92m  Downloaded[0m icu_provider v2.2.0
+[1m[92m  Downloaded[0m http v0.2.12
+[1m[92m  Downloaded[0m tokio v1.52.1
+[1m[92m  Downloaded[0m getrandom v0.3.4
+[1m[92m  Downloaded[0m httparse v1.10.1
+[1m[92m  Downloaded[0m ahash v0.8.12
+[1m[92m  Downloaded[0m parking_lot v0.12.5
+[1m[92m  Downloaded[0m webpki-roots v0.25.4
+[1m[92m  Downloaded[0m sct v0.7.1
+[1m[92m  Downloaded[0m rustls-pemfile v1.0.4
+[1m[92m  Downloaded[0m phf_macros v0.11.3
+[1m[92m  Downloaded[0m litemap v0.8.2
+[1m[92m  Downloaded[0m displaydoc v0.2.5
+[1m[92m  Downloaded[0m lock_api v0.4.14
+[1m[92m  Downloaded[0m pin-project-lite v0.2.17
+[1m[92m  Downloaded[0m phf_shared v0.10.0
+[1m[92m  Downloaded[0m phf_codegen v0.10.0
+[1m[92m  Downloaded[0m icu_normalizer v2.2.0
+[1m[92m  Downloaded[0m dtoa v1.0.11
+[1m[92m  Downloaded[0m httpdate v1.0.3
+[1m[92m  Downloaded[0m futures-task v0.3.32
+[1m[92m  Downloaded[0m precomputed-hash v0.1.1
+[1m[92m  Downloaded[0m serde_urlencoded v0.7.1
+[1m[92m  Downloaded[0m potential_utf v0.1.5
+[1m[92m  Downloaded[0m phf_shared v0.11.3
+[1m[92m  Downloaded[0m mime v0.3.17
+[1m[92m  Downloaded[0m scopeguard v1.2.0
+[1m[92m  Downloaded[0m phf v0.10.1
+[1m[92m  Downloaded[0m futures-io v0.3.32
+[1m[92m  Downloaded[0m ego-tree v0.6.3
+[1m[92m  Downloaded[0m siphasher v0.3.11
+[1m[92m  Downloaded[0m phf_generator v0.10.0
+[1m[92m  Downloaded[0m fnv v1.0.7
+[1m[92m  Downloaded[0m mac v0.1.1
+[1m[92m  Downloaded[0m jni-sys v0.3.1
+[1m[92m  Downloaded[0m futures-core v0.3.32
+[1m[92m  Downloaded[0m tokio-rustls v0.24.1
+[1m[92m  Downloaded[0m jni-sys v0.4.1
+[1m[92m  Downloaded[0m equivalent v1.0.2
+[1m[92m  Downloaded[0m cssparser-macros v0.6.1
+[1m[92m  Downloaded[0m string_cache v0.8.9
+[1m[92m  Downloaded[0m walkdir v2.5.0
+[1m[92m  Downloaded[0m stable_deref_trait v1.2.1
+[1m[92m  Downloaded[0m new_debug_unreachable v1.0.6
+[1m[92m  Downloaded[0m bytes v1.11.1
+[1m[92m  Downloaded[0m byteorder v1.5.0
+[1m[92m  Downloaded[0m utf-8 v0.7.6
+[1m[92m  Downloaded[0m string_cache_codegen v0.5.4
+[1m[92m  Downloaded[0m http-body v0.4.6
+[1m[92m  Downloaded[0m servo_arc v0.3.0
+[1m[92m  Downloaded[0m icu_properties v2.2.0
+[1m[92m  Downloaded[0m encoding_rs v0.8.35
+[1m[92m  Downloaded[0m futf v0.1.5
+[1m[92m  Downloaded[0m want v0.3.1
+[1m[92m  Downloaded[0m idna_adapter v1.2.1
+[1m[92m  Downloaded[0m dtoa-short v0.3.5
+[1m[92m  Downloaded[0m derive_more v0.99.20
+[1m[92m  Downloaded[0m ring v0.17.14
+[1m[92m  Downloaded[0m cssparser v0.31.2
+[1m[92m  Downloaded[0m form_urlencoded v1.2.2
+[1m[92m  Downloaded[0m cfg-if v1.0.4
+[1m[92m  Downloaded[0m futures-sink v0.3.32
+[1m[92m  Downloaded[0m futures-channel v0.3.32
+[1m[92m  Downloaded[0m cesu8 v1.1.0
+[1m[92m  Downloaded[0m synstructure v0.13.2
+[1m[92m   Compiling[0m proc-macro2 v1.0.106
+[1m[92m   Compiling[0m unicode-ident v1.0.24
+[1m[92m   Compiling[0m quote v1.0.45
+[1m[92m   Compiling[0m libc v0.2.186
+[1m[92m   Compiling[0m zerocopy v0.8.48
+[1m[92m   Compiling[0m cfg-if v1.0.4
+[1m[92m   Compiling[0m stable_deref_trait v1.2.1
+[1m[92m   Compiling[0m syn v2.0.117
+[1m[92m   Compiling[0m smallvec v1.15.1
+[1m[92m   Compiling[0m siphasher v1.0.2
+[1m[92m   Compiling[0m phf_shared v0.11.3
+[1m[92m   Compiling[0m getrandom v0.2.17
+[1m[92m   Compiling[0m bytes v1.11.1
+[1m[92m   Compiling[0m rand_core v0.6.4
+[1m[92m   Compiling[0m itoa v1.0.18
+[1m[92m   Compiling[0m shlex v1.3.0
+[1m[92m   Compiling[0m siphasher v0.3.11
+[1m[92m   Compiling[0m find-msvc-tools v0.1.9
+[1m[92m   Compiling[0m memchr v2.8.0
+[1m[92m   Compiling[0m cc v1.2.61
+[1m[92m   Compiling[0m phf_shared v0.10.0
+[1m[92m   Compiling[0m serde_core v1.0.228
+[1m[92m   Compiling[0m pin-project-lite v0.2.17
+[1m[92m   Compiling[0m log v0.4.29
+[1m[92m   Compiling[0m ring v0.17.14
+[1m[92m   Compiling[0m synstructure v0.13.2
+[1m[92m   Compiling[0m ppv-lite86 v0.2.21
+[1m[92m   Compiling[0m rand_chacha v0.3.1
+[1m[92m   Compiling[0m rand v0.8.6
+[1m[92m   Compiling[0m zerofrom-derive v0.1.7
+[1m[92m   Compiling[0m yoke-derive v0.8.2
+[1m[92m   Compiling[0m zerovec-derive v0.11.3
+[1m[92m   Compiling[0m zerofrom v0.1.7
+[1m[92m   Compiling[0m displaydoc v0.2.5
+[1m[92m   Compiling[0m yoke v0.8.2
+[1m[92m   Compiling[0m phf_generator v0.11.3
+[1m[92m   Compiling[0m zerovec v0.11.6
+[1m[92m   Compiling[0m phf_generator v0.10.0
+[1m[92m   Compiling[0m phf_codegen v0.10.0
+[1m[92m   Compiling[0m serde v1.0.228
+[1m[92m   Compiling[0m writeable v0.6.3
+[1m[92m   Compiling[0m litemap v0.8.2
+[1m[92m   Compiling[0m once_cell v1.21.4
+[1m[92m   Compiling[0m tinystr v0.8.3
+[1m[92m   Compiling[0m potential_utf v0.1.5
+[1m[92m   Compiling[0m zerotrie v0.2.4
+[1m[92m   Compiling[0m icu_locale_core v2.2.0
+[1m[92m   Compiling[0m mio v1.2.0
+[1m[92m   Compiling[0m socket2 v0.6.3
+[1m[92m   Compiling[0m untrusted v0.9.0
+[1m[92m   Compiling[0m new_debug_unreachable v1.0.6
+[1m[92m   Compiling[0m icu_normalizer_data v2.2.0
+[1m[92m   Compiling[0m icu_properties_data v2.2.0
+[1m[92m   Compiling[0m parking_lot_core v0.9.12
+[1m[92m   Compiling[0m futures-core v0.3.32
+[1m[92m   Compiling[0m utf8_iter v1.0.4
+[1m[92m   Compiling[0m icu_provider v2.2.0
+[1m[92m   Compiling[0m icu_collections v2.2.0
+[1m[92m   Compiling[0m tokio v1.52.1
+[1m[92m   Compiling[0m scopeguard v1.2.0
+[1m[92m   Compiling[0m syn v1.0.109
+[1m[92m   Compiling[0m fnv v1.0.7
+[1m[92m   Compiling[0m http v0.2.12
+[1m[92m   Compiling[0m lock_api v0.4.14
+[1m[92m   Compiling[0m tracing-core v0.1.36
+[1m[92m   Compiling[0m string_cache_codegen v0.5.4
+[1m[92m   Compiling[0m equivalent v1.0.2
+[1m[92m   Compiling[0m futures-sink v0.3.32
+[1m[92m   Compiling[0m precomputed-hash v0.1.1
+[1m[92m   Compiling[0m hashbrown v0.17.0
+[1m[92m   Compiling[0m httparse v1.10.1
+[1m[92m   Compiling[0m mac v0.1.1
+[1m[92m   Compiling[0m futures-io v0.3.32
+[1m[92m   Compiling[0m futures-task v0.3.32
+[1m[92m   Compiling[0m rustls v0.21.12
+[1m[92m   Compiling[0m slab v0.4.12
+[1m[92m   Compiling[0m futures-util v0.3.32
+[1m[92m   Compiling[0m indexmap v2.14.0
+[1m[92m   Compiling[0m futf v0.1.5
+[1m[92m   Compiling[0m tokio-util v0.7.18
+[1m[92m   Compiling[0m markup5ever v0.11.0
+[1m[92m   Compiling[0m rustls-webpki v0.101.7
+[1m[92m   Compiling[0m sct v0.7.1
+[1m[92m   Compiling[0m tracing v0.1.44
+[1m[92m   Compiling[0m parking_lot v0.12.5
+[1m[92m   Compiling[0m icu_properties v2.2.0
+[1m[92m   Compiling[0m icu_normalizer v2.2.0
+[1m[92m   Compiling[0m phf v0.10.1
+[1m[92m   Compiling[0m phf_macros v0.11.3
+[1m[92m   Compiling[0m getrandom v0.3.4
+[1m[92m   Compiling[0m utf-8 v0.7.6
+[1m[92m   Compiling[0m zmij v1.0.21
+[1m[92m   Compiling[0m try-lock v0.2.5
+[1m[92m   Compiling[0m percent-encoding v2.3.2
+[1m[92m   Compiling[0m version_check v0.9.5
+[1m[92m   Compiling[0m dtoa v1.0.11
+[1m[92m   Compiling[0m dtoa-short v0.3.5
+[1m[92m   Compiling[0m phf v0.11.3
+[1m[92m   Compiling[0m ahash v0.8.12
+[1m[92m   Compiling[0m form_urlencoded v1.2.2
+[1m[92m   Compiling[0m want v0.3.1
+[1m[92m   Compiling[0m tendril v0.4.3
+[1m[92m   Compiling[0m idna_adapter v1.2.1
+[1m[92m   Compiling[0m string_cache v0.8.9
+[1m[92m   Compiling[0m h2 v0.3.27
+[1m[92m   Compiling[0m http-body v0.4.6
+[1m[92m   Compiling[0m futures-channel v0.3.32
+[1m[92m   Compiling[0m selectors v0.25.0
+[1m[92m   Compiling[0m jni-sys-macros v0.4.1
+[1m[92m   Compiling[0m cssparser-macros v0.6.1
+[1m[92m   Compiling[0m socket2 v0.5.10
+[1m[92m   Compiling[0m byteorder v1.5.0
+[1m[92m   Compiling[0m serde_json v1.0.149
+[1m[92m   Compiling[0m thiserror v1.0.69
+[1m[92m   Compiling[0m html5ever v0.26.0
+[1m[92m   Compiling[0m httpdate v1.0.3
+[1m[92m   Compiling[0m jni-sys v0.3.1
+[1m[92m   Compiling[0m tower-service v0.3.3
+[1m[92m   Compiling[0m hyper v0.14.32
+[1m[92m   Compiling[0m fxhash v0.2.1
+[1m[92m   Compiling[0m tokio-rustls v0.24.1
+[1m[92m   Compiling[0m cssparser v0.31.2
+[1m[92m   Compiling[0m jni-sys v0.4.1
+[1m[92m   Compiling[0m idna v1.1.0
+[1m[92m   Compiling[0m derive_more v0.99.20
+[1m[92m   Compiling[0m thiserror-impl v1.0.69
+[1m[92m   Compiling[0m aho-corasick v1.1.4
+[1m[92m   Compiling[0m servo_arc v0.3.0
+[1m[92m   Compiling[0m regex-syntax v0.8.10
+[1m[92m   Compiling[0m unicode-width v0.2.2
+[1m[92m   Compiling[0m bitflags v2.11.1
+[1m[92m   Compiling[0m base64 v0.21.7
+[1m[92m   Compiling[0m ryu v1.0.23
+[1m[92m   Compiling[0m serde_urlencoded v0.7.1
+[1m[92m   Compiling[0m rustls-pemfile v1.0.4
+[1m[92m   Compiling[0m regex-automata v0.4.14
+[1m[92m   Compiling[0m getopts v0.2.24
+[1m[92m   Compiling[0m url v2.5.8
+[1m[92m   Compiling[0m hyper-rustls v0.24.2
+[1m[92m   Compiling[0m combine v4.6.7
+[1m[92m   Compiling[0m encoding_rs v0.8.35
+[1m[92m   Compiling[0m mime v0.3.17
+[1m[92m   Compiling[0m cesu8 v1.1.0
+[1m[92m   Compiling[0m ipnet v2.12.0
+[1m[92m   Compiling[0m sync_wrapper v0.1.2
+[1m[92m   Compiling[0m ego-tree v0.6.3
+[1m[92m   Compiling[0m webpki-roots v0.25.4
+[1m[92m   Compiling[0m reqwest v0.11.27
+[1m[92m   Compiling[0m jni v0.21.1
+[1m[92m   Compiling[0m scraper v0.18.1
+[1m[92m   Compiling[0m regex v1.12.3
+[1m[92m   Compiling[0m insta_core v0.1.0 (/home/runner/work/-nsta/-nsta/rust-core)
+[1m[92m    Finished[0m `release` profile [optimized] target(s) in 59.89s
+[2026-04-26T12:43:42Z WARN  cargo_ndk::cli] Environment variable `ANDROID_NDK_HOME = "/usr/local/lib/android/sdk/ndk/29.0.14206865"` doesn't match `ANDROID_NDK_ROOT = "/usr/local/lib/android/sdk/ndk/27.3.13750724"`
+[2026-04-26T12:43:42Z INFO  cargo_ndk::cli] Using NDK at path: /usr/local/lib/android/sdk/ndk/29.0.14206865 (ANDROID_NDK_HOME)
+[2026-04-26T12:43:42Z INFO  cargo_ndk::cli] NDK API level: 28
+[2026-04-26T12:43:42Z INFO  cargo_ndk::cli] Building targets: armeabi-v7a
+[2026-04-26T12:43:42Z INFO  cargo_ndk::cli] Building armeabi-v7a (armv7-linux-androideabi)
+[1m[92m   Compiling[0m libc v0.2.186
+[1m[92m   Compiling[0m cfg-if v1.0.4
+[1m[92m   Compiling[0m stable_deref_trait v1.2.1
+[1m[92m   Compiling[0m zerofrom v0.1.7
+[1m[92m   Compiling[0m smallvec v1.15.1
+[1m[92m   Compiling[0m bytes v1.11.1
+[1m[92m   Compiling[0m yoke v0.8.2
+[1m[92m   Compiling[0m itoa v1.0.18
+[1m[92m   Compiling[0m zerovec v0.11.6
+[1m[92m   Compiling[0m memchr v2.8.0
+[1m[92m   Compiling[0m pin-project-lite v0.2.17
+[1m[92m   Compiling[0m serde_core v1.0.228
+[1m[92m   Compiling[0m log v0.4.29
+[1m[92m   Compiling[0m ring v0.17.14
+[1m[92m   Compiling[0m tinystr v0.8.3
+[1m[92m   Compiling[0m litemap v0.8.2
+[1m[92m   Compiling[0m siphasher v1.0.2
+[1m[92m   Compiling[0m writeable v0.6.3
+[1m[92m   Compiling[0m once_cell v1.21.4
+[1m[92m   Compiling[0m icu_locale_core v2.2.0
+[1m[92m   Compiling[0m phf_shared v0.11.3
+[1m[92m   Compiling[0m serde v1.0.228
+[1m[92m   Compiling[0m potential_utf v0.1.5
+[1m[92m   Compiling[0m mio v1.2.0
+[1m[92m   Compiling[0m getrandom v0.2.17
+[1m[92m   Compiling[0m socket2 v0.6.3
+[1m[92m   Compiling[0m zerotrie v0.2.4
+[1m[92m   Compiling[0m futures-core v0.3.32
+[1m[92m   Compiling[0m new_debug_unreachable v1.0.6
+[1m[92m   Compiling[0m utf8_iter v1.0.4
+[1m[92m   Compiling[0m untrusted v0.9.0
+[1m[92m   Compiling[0m icu_collections v2.2.0
+[1m[92m   Compiling[0m icu_normalizer_data v2.2.0
+[1m[92m   Compiling[0m parking_lot_core v0.9.12
+[1m[92m   Compiling[0m icu_properties_data v2.2.0
+[1m[92m   Compiling[0m icu_provider v2.2.0
+[1m[92m   Compiling[0m tokio v1.52.1
+[1m[92m   Compiling[0m siphasher v0.3.11
+[1m[92m   Compiling[0m fnv v1.0.7
+[1m[92m   Compiling[0m scopeguard v1.2.0
+[1m[92m   Compiling[0m lock_api v0.4.14
+[1m[92m   Compiling[0m http v0.2.12
+[1m[92m   Compiling[0m phf_shared v0.10.0
+[1m[92m   Compiling[0m tracing-core v0.1.36
+[1m[92m   Compiling[0m slab v0.4.12
+[1m[92m   Compiling[0m equivalent v1.0.2
+[1m[92m   Compiling[0m futures-io v0.3.32
+[1m[92m   Compiling[0m futures-task v0.3.32
+[1m[92m   Compiling[0m precomputed-hash v0.1.1
+[1m[92m   Compiling[0m hashbrown v0.17.0
+[1m[92m   Compiling[0m mac v0.1.1
+[1m[92m   Compiling[0m futures-sink v0.3.32
+[1m[92m   Compiling[0m futf v0.1.5
+[1m[92m   Compiling[0m futures-util v0.3.32
+[1m[92m   Compiling[0m indexmap v2.14.0
+[1m[92m   Compiling[0m tokio-util v0.7.18
+[1m[92m   Compiling[0m rustls v0.21.12
+[1m[92m   Compiling[0m httparse v1.10.1
+[1m[92m   Compiling[0m tracing v0.1.44
+[1m[92m   Compiling[0m rustls-webpki v0.101.7
+[1m[92m   Compiling[0m sct v0.7.1
+[1m[92m   Compiling[0m icu_normalizer v2.2.0
+[1m[92m   Compiling[0m parking_lot v0.12.5
+[1m[92m   Compiling[0m icu_properties v2.2.0
+[1m[92m   Compiling[0m phf v0.10.1
+[1m[92m   Compiling[0m try-lock v0.2.5
+[1m[92m   Compiling[0m percent-encoding v2.3.2
+[1m[92m   Compiling[0m utf-8 v0.7.6
+[1m[92m   Compiling[0m dtoa v1.0.11
+[1m[92m   Compiling[0m zmij v1.0.21
+[1m[92m   Compiling[0m getrandom v0.3.4
+[1m[92m   Compiling[0m tendril v0.4.3
+[1m[92m   Compiling[0m dtoa-short v0.3.5
+[1m[92m   Compiling[0m form_urlencoded v1.2.2
+[1m[92m   Compiling[0m want v0.3.1
+[1m[92m   Compiling[0m phf v0.11.3
+[1m[92m   Compiling[0m string_cache v0.8.9
+[1m[92m   Compiling[0m h2 v0.3.27
+[1m[92m   Compiling[0m idna_adapter v1.2.1
+[1m[92m   Compiling[0m markup5ever v0.11.0
+[1m[92m   Compiling[0m http-body v0.4.6
+[1m[92m   Compiling[0m futures-channel v0.3.32
+[1m[92m   Compiling[0m socket2 v0.5.10
+[1m[92m   Compiling[0m zerocopy v0.8.48
+[1m[92m   Compiling[0m byteorder v1.5.0
+[1m[92m   Compiling[0m httpdate v1.0.3
+[1m[92m   Compiling[0m tower-service v0.3.3
+[1m[92m   Compiling[0m jni-sys v0.3.1
+[1m[92m   Compiling[0m serde_json v1.0.149
+[1m[92m   Compiling[0m thiserror v1.0.69
+[1m[92m   Compiling[0m tokio-rustls v0.24.1
+[1m[92m   Compiling[0m fxhash v0.2.1
+[1m[92m   Compiling[0m cssparser v0.31.2
+[1m[92m   Compiling[0m hyper v0.14.32
+[1m[92m   Compiling[0m jni-sys v0.4.1
+[1m[92m   Compiling[0m selectors v0.25.0
+[1m[92m   Compiling[0m idna v1.1.0
+[1m[92m   Compiling[0m html5ever v0.26.0
+[1m[92m   Compiling[0m ahash v0.8.12
+[1m[92m   Compiling[0m aho-corasick v1.1.4
+[1m[92m   Compiling[0m servo_arc v0.3.0
+[1m[92m   Compiling[0m base64 v0.21.7
+[1m[92m   Compiling[0m ryu v1.0.23
+[1m[92m   Compiling[0m regex-syntax v0.8.10
+[1m[92m   Compiling[0m bitflags v2.11.1
+[1m[92m   Compiling[0m unicode-width v0.2.2
+[1m[92m   Compiling[0m getopts v0.2.24
+[1m[92m   Compiling[0m regex-automata v0.4.14
+[1m[92m   Compiling[0m serde_urlencoded v0.7.1
+[1m[92m   Compiling[0m rustls-pemfile v1.0.4
+[1m[92m   Compiling[0m url v2.5.8
+[1m[92m   Compiling[0m hyper-rustls v0.24.2
+[1m[92m   Compiling[0m combine v4.6.7
+[1m[92m   Compiling[0m encoding_rs v0.8.35
+[1m[92m   Compiling[0m sync_wrapper v0.1.2
+[1m[92m   Compiling[0m mime v0.3.17
+[1m[92m   Compiling[0m cesu8 v1.1.0
+[1m[92m   Compiling[0m ipnet v2.12.0
+[1m[92m   Compiling[0m ego-tree v0.6.3
+[1m[92m   Compiling[0m webpki-roots v0.25.4
+[1m[92m   Compiling[0m reqwest v0.11.27
+[1m[92m   Compiling[0m jni v0.21.1
+[1m[92m   Compiling[0m scraper v0.18.1
+[1m[92m   Compiling[0m regex v1.12.3
+[1m[92m   Compiling[0m insta_core v0.1.0 (/home/runner/work/-nsta/-nsta/rust-core)
+[1m[92m    Finished[0m `release` profile [optimized] target(s) in 48.76s
+openjdk version "17.0.18" 2026-01-20
+OpenJDK Runtime Environment Temurin-17.0.18+8 (build 17.0.18+8)
+OpenJDK 64-Bit Server VM Temurin-17.0.18+8 (build 17.0.18+8, mixed mode, sharing)
+
+Welcome to Gradle 8.5!
+
+Here are the highlights of this release:
+ - Support for running on Java 21
+ - Faster first use with Kotlin DSL
+ - Improved error and warning messages
+
+For more details see https://docs.gradle.org/8.5/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 35
+
+This Android Gradle plugin (8.2.2) was tested up to compileSdk = 34.
+
+You are strongly encouraged to update your project to use a newer
+Android Gradle plugin that has been tested with compileSdk = 35.
+
+If you are already using the latest version of the Android Gradle plugin,
+you may need to wait until a newer version with support for compileSdk = 35 is available.
+
+To suppress this warning, add/update
+    android.suppressUnsupportedCompileSdk=35
+to this project's gradle.properties.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:checkDebugAarMetadata FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:checkDebugAarMetadata'.
+> Configuration `:app:debugRuntimeClasspath` contains AndroidX dependencies, but the `android.useAndroidX` property is not enabled, which may cause runtime issues.
+  Set `android.useAndroidX=true` in the `gradle.properties` file and retry.
+  The following AndroidX dependencies are detected:
+  :app:debugRuntimeClasspath -> androidx.core:core-ktx:1.12.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.annotation:annotation:1.6.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.annotation:annotation:1.6.0 -> androidx.annotation:annotation-jvm:1.6.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0 -> androidx.annotation:annotation-experimental:1.3.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.collection:collection:1.1.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0 -> androidx.concurrent:concurrent-futures:1.1.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0 -> androidx.interpolator:interpolator:1.0.0
+  :app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2 -> androidx.lifecycle:lifecycle-runtime:2.7.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0 -> androidx.lifecycle:lifecycle-livedata-core:2.7.0 -> androidx.arch.core:core-common:2.2.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0 -> androidx.lifecycle:lifecycle-livedata-core:2.7.0 -> androidx.arch.core:core-runtime:2.2.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0 -> androidx.lifecycle:lifecycle-common:2.7.0
+  :app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2 -> androidx.lifecycle:lifecycle-common-java8:2.7.0
+  :app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-ktx:2.7.0
+  :app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2 -> androidx.lifecycle:lifecycle-viewmodel:2.7.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0 -> androidx.lifecycle:lifecycle-livedata-core:2.7.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.startup:startup-runtime:1.1.1
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.tracing:tracing:1.0.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.savedstate:savedstate:1.2.1
+  :app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2 -> androidx.savedstate:savedstate-ktx:1.2.1
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.profileinstaller:profileinstaller:1.3.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0 -> androidx.versionedparcelable:versionedparcelable:1.1.1
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.activity:activity-ktx:1.8.2
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.runtime:runtime:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.runtime:runtime-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.runtime:runtime-saveable:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.runtime:runtime-saveable-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-android:1.5.4 -> androidx.autofill:autofill:1.0.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-geometry:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-geometry-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-util:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-util-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-graphics:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-graphics-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-unit:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-unit-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-text:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-text-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-tooling-preview:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-tooling-preview-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-android:1.5.4 -> androidx.customview:customview-poolingcontainer:1.0.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.animation:animation:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.animation:animation-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.animation:animation-core:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.animation:animation-core-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-layout:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-layout-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01
+  :app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.material:material-icons-core:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.material:material-icons-core-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.material:material-ripple:1.5.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.material:material-ripple-android:1.5.4
+  :app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1
+  :app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.room:room-common:2.6.1
+  :app:debugRuntimeClasspath -> androidx.room:room-ktx:2.6.1
+  :app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.sqlite:sqlite:2.4.0
+  :app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.sqlite:sqlite-framework:2.4.0
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:checkDebugAarMetadata'.
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:38)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+Caused by: com.android.builder.errors.EvalIssueException: Configuration `:app:debugRuntimeClasspath` contains AndroidX dependencies, but the `android.useAndroidX` property is not enabled, which may cause runtime issues.
+Set `android.useAndroidX=true` in the `gradle.properties` file and retry.
+The following AndroidX dependencies are detected:
+:app:debugRuntimeClasspath -> androidx.core:core-ktx:1.12.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.annotation:annotation:1.6.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.annotation:annotation:1.6.0 -> androidx.annotation:annotation-jvm:1.6.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0 -> androidx.annotation:annotation-experimental:1.3.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.collection:collection:1.1.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0 -> androidx.concurrent:concurrent-futures:1.1.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0 -> androidx.interpolator:interpolator:1.0.0
+:app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2 -> androidx.lifecycle:lifecycle-runtime:2.7.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0 -> androidx.lifecycle:lifecycle-livedata-core:2.7.0 -> androidx.arch.core:core-common:2.2.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0 -> androidx.lifecycle:lifecycle-livedata-core:2.7.0 -> androidx.arch.core:core-runtime:2.2.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0 -> androidx.lifecycle:lifecycle-common:2.7.0
+:app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2 -> androidx.lifecycle:lifecycle-common-java8:2.7.0
+:app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-ktx:2.7.0
+:app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2 -> androidx.lifecycle:lifecycle-viewmodel:2.7.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0 -> androidx.lifecycle:lifecycle-livedata-core:2.7.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.lifecycle:lifecycle-process:2.7.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0 -> androidx.startup:startup-runtime:1.1.1
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.tracing:tracing:1.0.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.savedstate:savedstate:1.2.1
+:app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2 -> androidx.savedstate:savedstate-ktx:1.2.1
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.profileinstaller:profileinstaller:1.3.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.core:core:1.12.0 -> androidx.versionedparcelable:versionedparcelable:1.1.1
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity:1.8.2 -> androidx.activity:activity-ktx:1.8.2
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.8.2 -> androidx.activity:activity-ktx:1.8.2 -> androidx.activity:activity:1.8.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.runtime:runtime:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.runtime:runtime-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.runtime:runtime-saveable:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.runtime:runtime-saveable-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-android:1.5.4 -> androidx.autofill:autofill:1.0.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-geometry:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-geometry-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-util:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-util-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-graphics:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-graphics-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-unit:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-unit-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-text:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-text-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4 -> androidx.emoji2:emoji2:1.4.0
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-tooling-preview:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-tooling-preview-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.ui:ui-android:1.5.4 -> androidx.customview:customview-poolingcontainer:1.0.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.animation:animation:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.animation:animation-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.animation:animation-core:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.animation:animation-core-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-layout:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.foundation:foundation-layout-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01
+:app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.1.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.material:material-icons-core:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.material:material-icons-core-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.material:material-ripple:1.5.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2023.10.01 -> androidx.compose.material:material-ripple-android:1.5.4
+:app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1
+:app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.room:room-common:2.6.1
+:app:debugRuntimeClasspath -> androidx.room:room-ktx:2.6.1
+:app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.sqlite:sqlite:2.4.0
+:app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.sqlite:sqlite-framework:2.4.0
+	at com.android.builder.errors.IssueReporter.reportError(IssueReporter.kt:114)
+	at com.android.builder.errors.IssueReporter.reportError$default(IssueReporter.kt:110)
+	at com.android.build.gradle.internal.dependency.AndroidXDependencyCheck$AndroidXDisabledJetifierDisabled.execute(AndroidXDependencyCheck.kt:72)
+	at com.android.build.gradle.internal.dependency.AndroidXDependencyCheck$AndroidXDisabledJetifierDisabled.execute(AndroidXDependencyCheck.kt:40)
+	at org.gradle.internal.code.DefaultUserCodeApplicationContext$CurrentApplication$1.execute(DefaultUserCodeApplicationContext.java:122)
+	at org.gradle.internal.event.BroadcastDispatch$ActionInvocationHandler.dispatch(BroadcastDispatch.java:99)
+	at org.gradle.internal.event.BroadcastDispatch$ActionInvocationHandler.dispatch(BroadcastDispatch.java:87)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:43)
+	at org.gradle.internal.event.BroadcastDispatch$SingletonDispatch.dispatch(BroadcastDispatch.java:268)
+	at org.gradle.internal.event.BroadcastDispatch$SingletonDispatch.dispatch(BroadcastDispatch.java:170)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:83)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:69)
+	at org.gradle.internal.event.BroadcastDispatch$CompositeDispatch.dispatch(BroadcastDispatch.java:381)
+	at org.gradle.internal.event.BroadcastDispatch$CompositeDispatch.dispatch(BroadcastDispatch.java:272)
+	at org.gradle.internal.event.ListenerBroadcast.dispatch(ListenerBroadcast.java:148)
+	at org.gradle.internal.event.ListenerBroadcast.dispatch(ListenerBroadcast.java:37)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy49.afterResolve(Unknown Source)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$1.call(DefaultConfiguration.java:726)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$1.call(DefaultConfiguration.java:703)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.resolveGraphInBuildOperation(DefaultConfiguration.java:703)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.lambda$resolveExclusivelyIfRequired$3(DefaultConfiguration.java:695)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$CalculatedModelValueImpl.update(DefaultProjectStateRegistry.java:504)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.resolveExclusivelyIfRequired(DefaultConfiguration.java:687)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.resolveGraphIfRequired(DefaultConfiguration.java:680)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.access$1800(DefaultConfiguration.java:167)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$VisitedArtifactsSetProvider.getValue(DefaultConfiguration.java:1622)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$VisitedArtifactsSetProvider.getValue(DefaultConfiguration.java:1613)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$SelectedArtifactsProvider.getValue(DefaultConfiguration.java:1659)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$SelectedArtifactsProvider.getValue(DefaultConfiguration.java:1626)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.getSelectedArtifacts(ResolutionBackedFileCollection.java:95)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.visitContents(ResolutionBackedFileCollection.java:73)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:359)
+	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:67)
+	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:92)
+	at org.gradle.api.internal.file.DefaultFileCollectionFactory$ResolvingFileCollection.visitChildren(DefaultFileCollectionFactory.java:285)
+	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:359)
+	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.tasks.PropertyFileCollection.visitChildren(PropertyFileCollection.java:48)
+	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:359)
+	at org.gradle.internal.fingerprint.impl.DefaultFileCollectionSnapshotter.snapshot(DefaultFileCollectionSnapshotter.java:47)
+	at org.gradle.internal.execution.impl.DefaultInputFingerprinter$InputCollectingVisitor.visitInputFileProperty(DefaultInputFingerprinter.java:133)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.visitRegularInputs(TaskExecution.java:328)
+	at org.gradle.internal.execution.impl.DefaultInputFingerprinter.fingerprintInputProperties(DefaultInputFingerprinter.java:63)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.captureExecutionStateWithOutputs(CaptureStateBeforeExecutionStep.java:123)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.lambda$captureExecutionState$1(CaptureStateBeforeExecutionStep.java:82)
+	at org.gradle.internal.execution.steps.BuildOperationStep$1.call(BuildOperationStep.java:37)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.internal.execution.steps.BuildOperationStep.operation(BuildOperationStep.java:34)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.captureExecutionState(CaptureStateBeforeExecutionStep.java:76)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.lambda$execute$0(CaptureStateBeforeExecutionStep.java:70)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:70)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:45)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNonEmptySources(SkipEmptyWorkStep.java:177)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:81)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:53)
+	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
+	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:75)
+	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:41)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:66)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:66)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:38)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:32)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:293)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:21)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:27)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:47)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:34)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:64)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:145)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:134)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+
+
+BUILD FAILED in 11s
+2 actionable tasks: 2 executed
+Android build failed!
